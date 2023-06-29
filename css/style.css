@@ -1,3 +1,16 @@
+* {
+    outline: 1px solid salmon;
+}
+
+/* color, size 등을 정해두고 변수 선언(:root)해서 쓰기
+익스플로어에선 대응이 안됨 사라지길 다행~ */
+:root {
+    --line: #f2f2f2;
+    --wc: #fff;
+    --bs: 60rem;
+    --bc50: rgba(0, 0, 0, 0.5);
+}
+
 html {
     font-size: 6.25%;
 
@@ -29,4 +42,141 @@ p {
     max-width: 1200rem;
     margin: 0 auto 30rem auto;
     padding: 0 15rem;
+}
+
+.section .tit h2 {
+    font-size: 30rem;
+    font-weight: 700;
+    margin: 0 0 10rem 0;
+}
+
+
+
+#header {
+    border-bottom: 1px solid #ddd;
+}
+
+#header .header_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100rem;
+    /* 메뉴가 중간이 아닐텐데 그럴땐 flex:1주면 됨 */
+}
+
+#gnb>ul {
+    display: flex;
+    gap: 40rem;
+}
+
+/* arrows 용 relative */
+#main_visual {
+    position: relative;
+}
+
+#main_visual .main_slide .itm {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 300rem);
+}
+
+#main_visual .main_slide .itm .slogan {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 15rem;
+    width: 1200rem;
+}
+
+#main_visual .main_slide .itm .slogan h3 {
+    color: var(--wc);
+    font-size: var(--bs);
+    font-weight: 700;
+    /* 영어 대문자로 바꿔주는거 */
+    text-transform: uppercase;
+    text-shadow: 0 0 10rem rgba(0, 0, 0, 0.5);
+    margin: 0 0 20rem 0;
+}
+
+#main_visual .main_slide .itm .slogan p {
+    color: var(--wc);
+    text-shadow: 0 0 10rem rgba(0, 0, 0, 0.5);
+}
+
+#main_visual .main_slide .itm01 {
+    background: url(../images/mainvisual01.jpg)no-repeat center center/cover;
+}
+
+#main_visual .main_slide .itm02 {
+    background: url(../images/mainvisual02.jpg)no-repeat center center/cover;
+}
+
+#main_visual .main_slide .itm03 {
+    background: url(../images/mainvisual03.jpg)no-repeat center center/cover;
+}
+
+#main_visual .arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+    max-width: 1400rem;
+    width: 100%;
+    padding: 0 15rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#main_visual .arrows i {
+    padding: 10rem;
+    background: var(--bc50);
+    border-radius: 50%;
+    font-size: 20rem;
+    color: var(--wc);
+}
+
+#main_content .inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+#main_content .img_box {
+    margin: 0 0 20rem 0;
+}
+
+#main_content figure strong {
+    display: block;
+    margin: 0 0 20rem 0;
+    font-weight: 500;
+}
+
+#main_event {
+    background: var(--line);
+}
+
+#main_event .sbar {
+    position: relative;
+    max-width: 1170rem;
+    margin: 30rem auto;
+    background: var(--bc50);
+
+    height: 20rem;
+    border-radius: 10rem;
+    overflow: hidden;
+}
+
+#main_event .sbar span {
+    background: tomato;
+}
+
+
+
+#footer .inner {
+    display: grid;
+    grid-template-columns: 150rem 1fr;
+    gap: 30rem;
 }
