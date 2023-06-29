@@ -1,0 +1,32 @@
+html {
+    font-size: 6.25%;
+
+}
+
+/* 1rem = 1px */
+
+body {
+    font-size: 16rem;
+}
+
+/* line-height : 3rem + 3rem */
+p {
+    line-height: 1.375;
+}
+
+.inner {
+    max-width: 1200rem;
+    margin: 0 auto;
+    padding: 0 15rem;
+}
+
+.section {
+    position: relative;
+    padding: 100px 0;
+}
+
+.section .tit {
+    max-width: 1200rem;
+    margin: 0 auto 30rem auto;
+    padding: 0 15rem;
+}
